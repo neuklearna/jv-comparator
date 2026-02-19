@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.util.Comparator;
 import java.util.Objects;
 
 public class Employee {
