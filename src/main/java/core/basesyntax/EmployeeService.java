@@ -10,7 +10,14 @@ public class EmployeeService {
             public int compare(Employee o1, Employee o2) {
                 int sortByAge = Integer.compare(o1.getAge(), o2.getAge());
                 if (sortByAge != 0) return sortByAge;
-                return o1.getName().compareTo(o2.getName());
+
+                int sortByName = o1.getName().compareTo(o2.getName());
+                if (sortByName != 0) return sortByName;
+
+                int sortBySex = o1.getSex().compareTo(o2.getSex());
+                if (sortBySex != 0) return sortBySex;
+
+                return o1.getPhoneNumber().compareToIgnoreCase(o2.getPhoneNumber());
             }
         };
 
